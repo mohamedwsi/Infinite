@@ -1,0 +1,225 @@
+:root{
+    --color:  rgb(0, 139, 139);
+    --color2: rgb(141, 131, 131);
+    --color3: rgb(37, 36, 36);
+    --color4: snow;
+}
+
+/* Header  style for all page */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color3);
+    font-size: 14px;
+}
+
+body{
+    background-image:linear-gradient(var(--color4),rgba(0, 139, 139, 0.3));
+}
+
+h2{
+    font-size: 20px;
+    letter-spacing: 0.25em;
+}
+
+h3{
+    letter-spacing: 0.25em;
+}
+
+.header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+
+
+nav > ol {
+    display: inline-flex;
+    padding: 30px;
+}
+
+nav > ol > li {
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+nav > ol > li > a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+nav > ol > li > .home::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: var(--color);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav > ol > li > a::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: var(--color);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav > ol > li > a:hover::after{
+    width: 100%;
+}
+
+nav > ol > li > a:hover{
+    color: var(--color2);
+}
+
+/* Footer Style for all page */
+
+footer{
+    width: 100%;
+    min-height: 30vh;
+    background-color: var(--color);
+    padding-top: 20px;
+}
+
+.info > p span {
+    padding-left: 20px;
+}
+
+.info > address{
+   padding-top: 50px;
+   padding-left: 20px;
+}
+
+.info > p,span,address {
+    color: snow;
+}
+
+.foot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+/* Home page */
+
+.heading{
+    text-align: center;
+    padding-top: 140px;
+}
+
+.heading > h1{
+    font-size: 50px;
+    letter-spacing: 0.25em;
+}
+
+.heading > p{
+    padding-top: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: var(--color2);
+    line-height: 30px;
+}
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+   }
+   
+   .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background:  var(--color);
+    width: 45px;
+    height: 45px;
+    transition: all 0.5s ease;
+   }
+   
+   .cta span {
+    position: relative;
+    font-weight: bold;
+    letter-spacing: 0.25em;
+    color: var(--color3);
+   }
+   
+   .cta:hover:before {
+    width: 100%;
+    background:  var(--color);
+   }
+   
+    
+   .cta:active {
+    transform: scale(0.95);
+   }
+
+  /*  about page */
+
+  .about{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.about > h2{
+    padding-bottom: 10px;
+}
+ 
+
+/* Portfolio Styles */
+
+.porthead{
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 25px;
+    margin-top: 30px;
+}
+
+
+.img1 > img,iframe {
+    width: 400px;
+    height: 200px;
+    border-radius: 10%;
+    margin: 20px;
+}
+
+.img1 >img:hover,iframe:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+
+
+/* Service page styling */
+
+.service{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.service > div {
+    padding-top: 50px;
+}
+
